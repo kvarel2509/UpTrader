@@ -15,6 +15,9 @@ class Menu(models.Model):
 		blank=True
 	)
 
+	def __str__(self) -> str:
+		return self.name
+
 
 class MenuItem(models.Model):
 	title = models.CharField(
@@ -24,7 +27,8 @@ class MenuItem(models.Model):
 	menu = models.ForeignKey(
 		verbose_name='меню',
 		to=Menu,
-		on_delete=models.CASCADE
+		on_delete=models.CASCADE,
+		related_name='menu_items'
 	)
 	parent = models.ForeignKey(
 		verbose_name='родитель',
@@ -37,3 +41,6 @@ class MenuItem(models.Model):
 	link = models.TextField(
 		verbose_name='адрес ссылки',
 	)
+
+	def __str__(self) -> str:
+		return self.title

@@ -1,0 +1,10 @@
+{% load tree_menu.menu %}
+
+
+<div class="menu">
+    {% for child in root.children %}
+        {% if child.visible %}
+            {% draw_menu_item child %}
+        {% endif %}
+    {% endfor %}
+</div>

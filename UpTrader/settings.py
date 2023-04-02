@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%%+ouw(%5wcy3s#jaz&xx2*sv&yp+0@yvw@l@%(@o3=2&=^sw6
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+CURRENT_DOMAIN = 'http://localhost:8000'
 
 # Application definition
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tree_menu.apps.TreeMenuConfig',
+    'example',
 ]
 
 MIDDLEWARE = [
