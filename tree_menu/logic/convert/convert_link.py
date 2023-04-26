@@ -1,6 +1,7 @@
-from django.urls import NoReverseMatch, reverse
-from django.conf import settings
 import urllib.parse
+
+from django.conf import settings
+from django.urls import NoReverseMatch, reverse
 
 
 class InvalidUrl(Exception):
